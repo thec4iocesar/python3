@@ -29,7 +29,7 @@ class Dog():
         print('GLUIBGLUIB')
     
     def comer(self):
-        print('GIMME-SOME-MORE-OF-THAT-FOOD-YOU-MF')
+        print('GIMME-SOME-MORE-OF-THAT-FOOD')
 
 dog1 = Dog('Ananias', 'Bull Terrier', 2)
 
