@@ -11,5 +11,4 @@ Dashboard **topperson** ;D
 - Gitlab
 - *Linux*
 
-[Professor](https://github.com/LucasRicciardi)
-[Aluno] (https://github.com/thec4iocesar)
+[Caio Cesar] (https://github.com/thec4iocesar)
