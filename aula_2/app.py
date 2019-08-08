@@ -1,9 +1,18 @@
+
 import sys 
 import os
 
 import flask
 
 app = flask.Flask(__name__)
+
+@app.route('/')
+def index():
+    context = {
+        'title': 'Python | Sysadmin'
+    }
+    
+    return flask.render_template('index.html', context=context)
 
 if __name__ == "__main__":
 
