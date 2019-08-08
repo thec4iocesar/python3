@@ -1,15 +1,30 @@
 
 import sys 
 import os
+import time
 
 import flask
+import requests
 
 app = flask.Flask(__name__)
 
 @app.route('/')
 def index():
+
+    res = requests.get('https://gen-net.herokuapp.com/api/users/')
+    users = res.json() if res.status_code == 200 else []
+
+    def extract(u):
+        return u
+        
+        #'name': u['name'],
+        #'ermail': u['email'],
+        #'createdAt':'{%d/%m/%Y}'.format(u['createdAt']),
+        #'updatedAt':'{%d/%m/%Y}'.format(u['updatedAt']),
+
     context = {
-        'title': 'Python | Sysadmin'
+        'title': 'Python | Sysadmin',
+        'users': [ extract (u) for u in users]
     }
     
     return flask.render_template('index.html', context=context)
