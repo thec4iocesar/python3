@@ -14,7 +14,7 @@
 </head>
 
 <body>
-
+  
   <div class="container">
     <div class="row">
       {% for u in context.users %}
@@ -23,9 +23,9 @@
           <div class="card-body">
             <h5 class="card-title">{{u.name}}</h5>
             <ul>
-              <li class="card-text">{{u.email}}</li>
-              <li class="card-text">{{u.createdAt}}</li>
-              <li class="card-text">{{u.updatedAt}}</li>
+              <li class="cardtext">{{u.email}}</li>
+              <li class="cardtext">{{u.createdAt}}</li>
+              <li class="cardtext">{{u.updatedAt}}</li>
             </ul>
           </div>
         </div>

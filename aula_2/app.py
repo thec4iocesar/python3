@@ -6,7 +6,11 @@ import time
 import flask
 import requests
 
+from routes.auth import blueprint as auth_blueprint
+
 app = flask.Flask(__name__)
+
+app.register_blueprint(auth_blueprint)
 
 @app.route('/')
 def index():
