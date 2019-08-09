@@ -1,0 +1,17 @@
+apt-get install slapd
+apt-get install ldap-utils
+dpkg-reconfigure slapd
+
+slapdcat - dump da base
+
+
+#Inserir user via terminal
+ldapadd ­-x -­D "cn=admin,dc=dexter,dc=com,dc=br" ­-f user.ldif -­W
+
+#Consultar
+ldapsearch ­-x -LLL ­-b dc=dexter,dc=com,dc=br
+
+-x autententicação basica
+-LLL retira os comentários e tras apenas o que interessa, como se fosse o inverso do -v
+-b a base para a consulta
+ldapsearch -h dexter.com.br -D 'cn=admin,dc=dexter,dc=com,dc=br' -b 'dc=dexter' -w'123' 
