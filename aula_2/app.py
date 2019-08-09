@@ -8,12 +8,16 @@ import requests
 
 from routes.auth import blueprint as auth_blueprint
 from routes.jenkins import blueprint as jenkins_blueprint
+from routes.docker import blueprint as docker_blueprint
+from routes.gitlab import blueprint as gitlab_blueprint
 
 
 app = flask.Flask(__name__)
 
 app.register_blueprint(auth_blueprint)
 app.register_blueprint(jenkins_blueprint)
+app.register_blueprint(docker_blueprint)
+app.register_blueprint(gitlab_blueprint)
 
 @app.route('/')
 def index():
